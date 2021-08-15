@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project</title>
+    <link rel="stylesheet" href="../../Final Project/css/style.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/all.min.css">
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <a href="#" class="logo"> Portfolio</a>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">About Me</a></li>
+                <li><a href="">Reach Me</a></li>
+            </ul>
+            <img src="../lib/moon.png" id="icon">
+        </nav>
+
+        <div class="info">
+            <h4>Hello!</h4>
+            <h2>I am <br> Reza Andrianto</h2>
+            <h3>Junior Front End Engineer</h3>
+            <p>And this is my official Portfolio website <br>
+                to showcase my all works related to web development 
+                and Graphic Designer</p>
+            <a href="#" class="button-slider">Hire Me!</a>
+            <a href="#" class="button-slider">My Masterpiece</a>
+            <img src="../lib/1.png" class="elements" data-speed="8" >
+            <img src="../lib/3.png" class="elements" data-speed="10">
+            <img src="../lib/4.png" class="elements" data-speed="-6">
+            <img src="../lib/5.png" class="elements" data-speed="-8">
+            <img src="../lib/6.png" class="elements" data-speed="-10">
+        </div>
+            <div class="img-box">
+                <img src="../lib/WhatsApp Image 2021-08-14 at 16.14.23.jpeg" class="main-img">
+            </div>
+            <div class ="services">
+                <h1>My Services</h1>
+                <div class="flex-container">
+                        <div class="flex-items">
+                            <i class="fa fa-laptop-code"></i>
+                            <h3>Web Development</h3>
+                       </div>
+                        <div class="flex-items">
+                            <i class="fa fa fa-pallet"></i>
+                            <h3>Graphic Designer</h3>
+                       </div>
+                </div>
+            </div>
+            <div class="about">
+                <div class="social-links">
+                    <a href=""><i class="fa  fa-facebook"></i></a>
+                    <a href=""><i class="fa  fa-facebook"></i></a>
+                    <a href=""><i class="fa  fa-twitter"></i></a>
+                </div>
+                <div class="aboutme">
+                    <h2>About Me</h2>
+                </div>      
+                    <div class="contentBx">
+                        <div class="content">
+                        <p>Halo!, Nama saya Mohammad Reza Andrianto 
+                        saya laki laki kelahiran sukabumi tepatnya di cimelati 
+                        saya lulus dari Madrasah Aliyah Negeri 19 Jakarta pada tahun 2013 
+                        dan lulus dari perkuliahan pada tahun 2016 
+                        jurusan kuliah saya adalah Teknologi Industri di Politeknik Negeri Yogyakarta,<br>
+                        dan sekarang saya sedang fokus menjadi Front End Engineer yang dibutuhkan oleh banyak industri
+                        saya juga seorang Freelance Graphic Designer 
+                        Jika butuh saya dalam project ataupun acara anda, saya senang bisa dihubungi! </p>
+                         </div>
+                         <div class="content">
+                                <div class="imgBx">
+                                    <img src="../lib/beach2.jpeg" class="cover">
+                                </div>
+                        </div>
+                    </div>
+            </div>
+        <section class="post" id="post">
+            <div class="title">
+                <h2>Feel free to contact me!</h2>
+                <p>Fill the contact form to reach me</p>
+            </div>
+            <div class="contactForm">
+                <div class="row">
+                    <input type="text" name="" placeholder="First Name"> 
+                    <input type="text" name="" placeholder="Last Name"> 
+                </div>
+                <div class="row">
+                    <input type="text" name="" placeholder="Email Address"> 
+                    <input type="text" name="" placeholder="Mobile Number"> 
+                </div>
+                <div class="row2">
+                    <textarea placeholder="Message"></textarea>
+                </div>
+                <div class="row2">
+                    <input type="submit" value="Send" class="btn">
+                </div>
+            </div>
+        </section>
+     <footer>
+            Made With <i class="fas fa-heart"></i> By Mohammad Reza Andrianto,Copyright@2021
+     </footer>
+    </div>
+
+<script>
+    var icon = document.getElementById("icon");
+
+    icon.onclick = function(){
+        document.body.classList.toggle("dark-theme");
+        if(document.body.classList.contains("dark-theme")){
+            icon.src = "../lib/sun.png";
+        }else{
+            icon.src = "../lib/moon.png";
+        }
+    }
+
+    function parallax(e){
+        this.querySelectorAll('.elements').forEach(layer => {
+            const speed = layer.getAttribute('data-speed');
+            const x = (window.innerWidth - e.pageX*speed)/100;
+            layer.style.transform = `translateX(${x}px)`;
+        })
+    }
+
+    document.addEventListener("mousemove", parallax);
+</script>
+
+</body>
+</html>
